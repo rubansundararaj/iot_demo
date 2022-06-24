@@ -1,0 +1,269 @@
+
+
+
+{
+    "autocodegen": "1.0",
+    "info": {
+        "title": "iot_demo",
+        "description": "This is a simple example NodeJS API project to demonstrate AutoCodeGen Documentation",
+        "version": "1.0.0",
+        "contact": {
+            "email": "abc@autocodegen.com"
+        }
+    },
+    "schemes": ["http"],
+    "host": "http://localhost:8080",
+    "baseRoute": "/",
+     "routes" : [
+             {
+        "routeName" : "/temp_senor_manager/post_temp_senor_manager_data",
+        "method" : "post",    
+        "description": "post_temp_senor_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                      "unique_sensor_id" : "<String>"           
+     ,
+          "deployment_id" : "<String>"           
+     ,
+          "temperature_value" : "<Number>"           
+     ,
+          "meta_data" : "<{}>"           
+                 }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/temp_senor_manager/get_one_temp_senor_manager_data",
+        "method" : "get",    
+        "description": "get_one_temp_senor_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+     "unique_sensor_id" : "req.query.unique_sensor_id"        }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_sensor_id" : "<String>",                      "deployment_id" : "<String>",                      "temperature_value" : "<Number>",                      "meta_data" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/temp_senor_manager/get_all_temp_senor_manager_data",
+        "method" : "get",    
+        "description": "get_all_temp_senor_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_sensor_id" : "<String>",                      "deployment_id" : "<String>",                      "temperature_value" : "<Number>",                      "meta_data" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/temp_senor_manager/update_one_temp_senor_manager_data",
+        "method" : "patch",    
+        "description": "temp_senor_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                "unique_sensor_id" : "req.query.unique_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                "deployment_id" :  "<String>",                "temperature_value" :  "<Number>",                "meta_data" :  "<{}>"                    }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/temp_senor_manager/delete_one_temp_senor_manager_data",
+        "method" : "delete",    
+        "description": "delete_one_temp_senor_manager_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+               "unique_sensor_id" : "req.query.unique_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+         
+
+
+     ]
+
+
+
+,
+ "customRoutes" : [
+                   {
+        "routeName" : "/temp_senor_manager/get_one_temperature_value_by_unique_sensor_id",
+        "method" : "get",    
+        "description": "get_one_temperature_value_by_unique_sensor_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_sensor_id" : "req.query.unique_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "temperature_value" : "temperature_value_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+       ,{
+        "routeName" : "/temp_senor_manager/update_one_temperature_value_by_unique_sensor_id",
+        "method" : "patch",    
+        "description": "update_one_temperature_value_by_unique_sensor_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_sensor_id" : "req.query.unique_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "temperature_value" : "temperature_value_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+  
+ ]
+        
+ }
